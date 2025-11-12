@@ -1,0 +1,15 @@
+<%- include("partials/header", { title: title }) %>
+
+<h1>Add a new project</h1>
+
+<form action="/projects" method="POST">
+  <label>Project Title</label><br>
+  <input type="text" name="title" required><br><br>
+
+  <label>Description</label><br>
+  <textarea name="description" required></textarea><br><br>
+
+  <button type="submit">Add Project</button>
+</form>
+
+<%- include("partials/footer") %>
