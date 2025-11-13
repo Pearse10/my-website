@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+
+  <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-<header>
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/about">About</a> |
-        <a href="/projects">Projects</a> |
 
-        <% if (session && session.loggedIn) { %>
-            <a href="/projects/new">Add Project</a> |
-            <a href="/logout">Logout</a>
-        <% } else { %>
-            <a href="/login">Login</a>
-        <% } %>
+  <header class="glass-header">
+    <div class="nav-left">
+      <a href="/" class="logo">Pearse</a>
+    </div>
+
+    <nav class="nav-right">
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/about">About</a>
+
+      <% if (session.loggedIn) { %>
+        <a href="/logout">Logout</a>
+      <% } else { %>
+        <a href="/login">Login</a>
+      <% } %>
     </nav>
+  </header>
 
-</header>
-<main>
+  <!-- Wrap all content -->
+  <main class="page-content">
