@@ -1,14 +1,24 @@
+/* Make widths include padding & border */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
 /* ------------------- */
 /* Root theme colors   */
 /* ------------------- */
 :root {
-  --bg: #0d0d0f;
-  --bg-light: #141417;
-  --text: #ffffffd9;
-  --text-dim: #ffffff88;
-  --accent: #8888ff;
+  --bg: #16181d;        /* lighter overall background */
+  --bg-light: #20232a;  /* lighter card/nav background */
+  --text: #f5f5f5;      /* almost white */
+  --text-dim: #c0c0c0;  /* softer grey */
+  --accent: #7da0ff;    /* slightly softer blue */
   --radius: 12px;
 }
+
 
 /* ------------------- */
 /* Global              */
@@ -43,6 +53,16 @@ body {
   z-index: 1000;
 }
 
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;      /* spacing between links */
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+
+
 .logo {
   font-size: 1.4rem;
   font-weight: 600;
@@ -51,11 +71,11 @@ body {
 }
 
 nav a {
-  margin-left: 20px;
   text-decoration: none;
   color: var(--text-dim);
   font-weight: 500;
 }
+
 
 nav a:hover {
   color: var(--accent);
@@ -104,3 +124,21 @@ nav a:hover {
   margin-top: 60px;
   color: var(--text-dim);
 }
+
+
+
+@media (max-width: 700px) {
+  .glass-header {
+    padding: 0 16px;
+    height: auto;              /* allow it to grow taller */
+    flex-direction: column;    /* stack logo above nav */
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+}
+
