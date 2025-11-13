@@ -16,9 +16,8 @@ console.log("Views folder absolute path:", path.join(__dirname, "views"));
 const PORT = 3000;
 
 // for database
-const dbPath = process.env.DATABASE_URL || path.join("/tmp", "database.db");
+const db = require("./database.js");
 
-const db = new Database(dbPath);
 
 
 
