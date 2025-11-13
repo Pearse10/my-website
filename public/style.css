@@ -11,8 +11,8 @@
 /* Root theme colors   */
 /* ------------------- */
 :root {
-  --bg: #16181d;        /* lighter overall background */
-  --bg-light: #20232a;  /* lighter card/nav background */
+  --bg: #e0e0e1;        /* lighter overall background */
+  --bg-light: #464647;  /* lighter card/nav background */
   --text: #f5f5f5;      /* almost white */
   --text-dim: #c0c0c0;  /* softer grey */
   --accent: #7da0ff;    /* slightly softer blue */
