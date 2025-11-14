@@ -103,7 +103,7 @@ app.get("/login", (req, res) => {
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
 
-  // hardcoded for now — we will replace with DB later
+  // hardcoded for now -- will replace with DB later
   if (username === "admin" && password === "test123") {
     req.session.loggedIn = true;
     return res.redirect("/");
@@ -132,7 +132,7 @@ app.post("/projects", (req, res) => {
   res.redirect("/projects");
 });
 
-// ✅ delete project (add this just after the one above)
+// Delete project
 app.post("/projects/delete", (req, res) => {
   if (!req.session.loggedIn) return res.redirect("/login");
 

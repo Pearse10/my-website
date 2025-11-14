@@ -36,7 +36,7 @@ body {
 /* button styling */
 input, textarea, select, button {
   border-radius: var(--radius);
-  border: 1.5px solid rgba(255, 255, 255, 0.08);  /* subtle border */
+  border: 1.5px solid rgba(255, 255, 255, 0.1);  /* subtle border */
   padding: 10px 14px;
   background: var(--bg-light);
   color: var(--text);
@@ -57,10 +57,7 @@ button:hover {
 
 
 
-
-/* ------------------- */
 /* Header (Glass)      */
-/* ------------------- */
 .glass-header {
   position: fixed;       /* sticks to top */
   top: 0;
